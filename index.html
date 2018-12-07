@@ -16,6 +16,9 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+
     <style media="screen">
       .icon-bar {
          background-color:#FF0000 !important;
@@ -90,75 +93,78 @@
     </header>
     <!-- /Header -->
 
-    <div class="container">
-      <br><br>
-      <div class="row">
-        <div class="col-sm-12 col-md-12">
-          <div class="thumbnail drop-shadow">
-            <div class="caption">
-              <div style="padding: 10px;">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Masukkan NIM kamu...">
-                  <span class="input-group-btn">
-                    <button class="btn btn-danger" type="button">Check</button>
-                  </span>
-                </div><!-- /input-group -->
+    <div id="ti16-app">
+      <div class="container">
+          <br><br>
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="thumbnail drop-shadow">
+                <div class="caption">
+                  <div style="padding: 10px;">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="nim" v-model="nim" placeholder="Masukkan NIM kamu...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-danger" type="button" v-on:click="cek(nim)">Check</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div class="content">
-      <div class="container">
-        <!-- Post -->
-        <div class="post">
-          <a href="#"><h1>Hi, Isfha!</h1></a>
-          <hr>
-          <div class="in-content">
-            <p>Berikut nilai kamu dari pertemuan awal hingga tugas akhir saat ini.</p>
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Recyclerview</td>
-                  <td>90</td>
-                </tr>
-                <tr>
-                    <td>Recyclerview</td>
-                    <td>90</td>
-                  </tr>
-                  <tr>
+    
+        <!-- Content -->
+        <div class="content">
+          <div class="container">
+            <!-- Post -->
+            <div class="post">
+              <a href="#"><h1>Hi, Isfha!</h1></a>
+              <hr>
+              <div class="in-content">
+                <p>Berikut nilai kamu dari pertemuan awal hingga tugas akhir saat ini.</p>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
                       <td>Recyclerview</td>
                       <td>90</td>
                     </tr>
-              </tbody>
-            </table>
-            <a class="read-more" href="#">Refresh</a>
-          </div>
-          <div class="foot-post">
-            <div class="row">
-              <div class="col-md-12">
-					    	<strong>Tags:</strong>
-					    	<a href="#">Galaxy</a>
-					    </div>
-					    <div class="col-md-12">
-					    	<strong>Comments:</strong>
-					    	<a href="#">3</a>
-					    </div>
+                    <tr>
+                        <td>Recyclerview</td>
+                        <td>90</td>
+                      </tr>
+                      <tr>
+                          <td>Recyclerview</td>
+                          <td>90</td>
+                        </tr>
+                  </tbody>
+                </table>
+                <a class="read-more" href="#">Refresh</a>
+              </div>
+              <div class="foot-post">
+                <div class="row">
+                  <div class="col-md-12">
+                    <strong>Tags:</strong>
+                    {{ result }}
+                  </div>
+                  <div class="col-md-12">
+                    <strong>Comments:</strong>
+                    <a href="#">3</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <!-- /Content -->
     </div>
-    <!-- /Content -->
+
     <footer>
       <div class="container">
         <div class="row">
@@ -174,6 +180,21 @@
 
 	<!-- Script -->
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <script>
+    new Vue({
+      data: {
+        nim: '',
+        result: '{}'
+      },
+      el: '#ti16-app',
+      methods: {
+        cek: function(nim) {
+          this.result = this.nim;
+        }
+      }
+    })
+  </script>
 </body>
 </html>

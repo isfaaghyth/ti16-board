@@ -234,7 +234,7 @@ body {
 }
 
 .navbar.navbar-inverse.navbar-custom .navbar-brand:hover {
-   color: #007fb2;
+   color: #EF3A3A;
    -webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out
@@ -246,14 +246,14 @@ body {
 }
 
 .navbar.navbar-inverse.navbar-custom .navbar-nav>li>a:hover, .navbar.navbar-inverse.navbar-custom .navbar-nav>li>a:focus {
-   color: #007fb2;
+   color: #EF3A3A;
    -webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out
 }
 
 .navbar.navbar-inverse.navbar-custom .navbar-nav>.active>a, .navbar.navbar-inverse.navbar-custom .navbar-nav>.active>a:hover, .navbar.navbar-inverse.navbar-custom .navbar-nav>.active>a:focus {
-   color: #007fb2;
+   color: #EF3A3A;
    background-color: #fff;
    -webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
@@ -271,23 +271,29 @@ body {
 header {
    width: 100%;
    height: 272px;
-   padding-top: 117px;
-   background: url(../img/head-bg.jpg) #F7F7F7 center top
+   background-repeat: no-repeat;
+   background: url(https://kylebenk.com/wp-content/uploads/2016/03/being-remote-developer-featured-image-v2-1200x376.png) #F7F7F7 fixed
 }
 
+.header-overlay {
+   background: rgba(0, 0, 0, 0.5);
+   width: 100%;
+   height: 100%;
+ }
+
 header p {
-   color: #E85F37;
+   /* color: #E85F37; */
    font-family: "Open Sans", sans-serif;
-   font-size: 13px;
+   font-size: 20px;
    letter-spacing: 2px;
    font-weight: 700;
-   text-transform: uppercase;
-   text-align: center;
-   padding: 10px 25px;
-   background: #fff;
-   border: 1px solid #DC5227;
-   border-radius: 5px;
-   box-shadow: inset 0 -3px 0 #ffcfbc;
+   color: #FFF;
+   /* text-transform: uppercase; */
+   /* padding: 10px 25px; */
+   /* background: #fff; */
+   /* border: 1px solid #DC5227; */
+   /* border-radius: 5px; */
+   /* box-shadow: inset 0 -3px 0 #ffcfbc; */
    position: relative;
    -webkit-animation: smooth-entry-btn 1s;
    -moz-animation: smooth-entry-btn 1s;

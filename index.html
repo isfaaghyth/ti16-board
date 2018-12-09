@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Seirama - komunitas #OrangBaik</title>
+    <title>TI16</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="dist/css/main.css" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="dist/img/favicon.png" />
+    <!-- <link rel="shortcut icon" href="dist/img/favicon.png" /> -->
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
@@ -189,7 +189,7 @@
       el: '#ti16-app',
       methods: {
         cek: function(nim) {
-          axios.get(`http://localhost:1337/nilai/${nim}`)
+          axios.get(`http://35.186.145.167:1337/nilai/${nim}`)
               .then(response => {
                 this.data = response.data;
                 this.student = response.data.student;
